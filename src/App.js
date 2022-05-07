@@ -7,7 +7,7 @@ import List from './components/List/List';
 import Map from './components/Map/Map';
 
 const App = () => {
-  const [type, setType] = useState('');
+  // const [type, setType] = useState('');
   const [rating, setRating] = useState('');
 
   const [coords, setCoords] = useState({});
@@ -21,7 +21,6 @@ const App = () => {
   const [childClicked, setChildClicked] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log(type);
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
       setCoords({ lat: latitude, lng: longitude });
@@ -79,8 +78,8 @@ const App = () => {
             isLoading={isLoading}
             childClicked={childClicked}
             places={filteredPlaces.length ? filteredPlaces : places}
-            type={type}
-            setType={setType}
+            // type={type}
+            // setType={setType}
             rating={rating}
             setRating={setRating}
           />
