@@ -34,6 +34,13 @@ const PlaceDetails = ({ place, selected, refProp }) => {
 
         </Box>
         <Box display="flex" justifyContent="space-between">
+          <Typography component="legend">Timings</Typography>
+          <Typography variant="subtitle1">
+            {Math.floor(place.hours?.week_ranges[0][0]?.open_time / 60)}-{Math.floor(place.hours?.week_ranges[0][0]?.close_time / 60)}
+          </Typography>
+
+        </Box>
+        <Box display="flex" justifyContent="space-between">
           <Typography component="legend">Ranking</Typography>
           <Typography gutterBottom variant="subtitle1">
             {place.ranking}
